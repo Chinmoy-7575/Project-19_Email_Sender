@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+    <head>
+        <title> Email Sender </title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <h1> Mailer In Node.JS </h1> 
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="form_actions">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </body>
+</html>
